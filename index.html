@@ -5,59 +5,155 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hospedagens</title>
     <link rel="stylesheet" href="Assets/Styles/styles.css" />
-    <script src="Assets/Script/Script.js" defer></script>
+    <script src="Assets/Script/index.js" defer></script>
   </head>
   <body>
-    <header>
-      <!-- Menu hamburguer -->
-      <label class="hamburger">
-        <input id="input-hamburguer" type="checkbox" />
-        <svg viewBox="0 0 32 32">
-          <path
-            class="line line-top-bottom"
-            d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"
-          ></path>
-          <path class="line" d="M7 16 27 16"></path>
-        </svg>
-      </label>
-
-      <img
-        class="header-logo"
-        src="Assets/Images/logo-branca.png"
-        alt="Logotipo da empresa"
-      />
-
-      <nav class="navbar">
-        <ul>
-          <li class="navbar-item">
-            <a href="">Hotéis</a>
-          </li>
-          <li class="navbar-item">
-            <a href="">Contato</a>
-          </li>
-          <li class="navbar-item">
-            <a href="">Entrar</a>
-          </li>
-          <li class="navbar-item">
-            <a href="">Cadastrar-se</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
     <main>
+      <header>
+        <!-- Menu hamburguer -->
+        <label class="hamburger">
+          <input id="input-hamburguer" type="checkbox" />
+          <svg viewBox="0 0 32 32">
+            <path
+              class="line line-top-bottom"
+              d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"
+            ></path>
+            <path class="line" d="M7 16 27 16"></path>
+          </svg>
+        </label>
+        <a class="header-logo" href="/"><h1>Hospedagens.com</h1></a>
+        <!-- <img
+            class="header-logo"
+            src="Assets/Images/logo-branca.png"
+            alt="Logotipo da empresa"
+          /> -->
+
+        <nav class="navbar">
+          <ul>
+            <li class="navbar-item">
+              <a href="">Hotéis</a>
+            </li>
+            <li class="navbar-item">
+              <a href="">Contato</a>
+            </li>
+            <li class="navbar-item">
+              <a href="">Entrar</a>
+            </li>
+            <li class="navbar-item">
+              <a href="">Cadastrar-se</a>
+            </li>
+            <li class="navbar-item-sem-borda">
+              <!-- switch theme -->
+              <label for="switch" class="switch">
+                <input id="switch" type="checkbox" />
+                <span class="slider"></span>
+                <span class="decoration"></span>
+              </label>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
       <section class="section1">
         <div id="grid">
           <div class="content">
-            <div>
-              <h1>As melhores hospedagens do Brasil</h1>
-              <p>
+            <div class="content-section1">
+              <h1 id="titulo" class="titulo-section1">
+                As melhores hospedagens do Brasil
+              </h1>
+              <p class="p-conteudo-section1" id="p-conteudo">
                 mais de 500 mil reservas esperando por você! Basta procurar pelo
                 local ideal, e realizar a viagem dos seus sonhos
               </p>
             </div>
+
             <img src="Assets/Images/mapa-brasil.png" alt="Mapa do Brasil." />
           </div>
         </div>
+      </section>
+
+      <section class="form-submit">
+        <form action="">
+          <label for="input-from1">
+            <i>
+              <svg
+                width="12"
+                height="16"
+                viewBox="0 0 12 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5.38338 15.6772C0.842813 9.09472 0 8.41915 0 6C0 2.68628 2.68628 0 6 0C9.31372 0 12 2.68628 12 6C12 8.41915 11.1572 9.09472 6.61662 15.6772C6.31866 16.1076 5.68131 16.1076 5.38338 15.6772ZM6 8.5C7.38072 8.5 8.5 7.38072 8.5 6C8.5 4.61928 7.38072 3.5 6 3.5C4.61928 3.5 3.5 4.61928 3.5 6C3.5 7.38072 4.61928 8.5 6 8.5Z"
+                  fill="#4E4B59"
+                />
+              </svg>
+            </i>
+            <input
+              id="input-from1"
+              placeholder="Qual o local desejado?"
+              type="text"
+            />
+          </label>
+          <label for="input-from2">
+            <i>
+              <svg
+                width="15"
+                height="16"
+                viewBox="0 0 15 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0 14.5C0 15.3281 0.68703 16 1.53383 16H12.782C13.6288 16 14.3158 15.3281 14.3158 14.5V6H0V14.5ZM2.04511 8.5C2.04511 8.225 2.27519 8 2.55639 8H5.62406C5.90526 8 6.13534 8.225 6.13534 8.5V11.5C6.13534 11.775 5.90526 12 5.62406 12H2.55639C2.27519 12 2.04511 11.775 2.04511 11.5V8.5ZM12.782 2H11.2481V0.5C11.2481 0.225 11.018 0 10.7368 0H9.71429C9.43308 0 9.20301 0.225 9.20301 0.5V2H5.11278V0.5C5.11278 0.225 4.88271 0 4.6015 0H3.57895C3.29774 0 3.06767 0.225 3.06767 0.5V2H1.53383C0.68703 2 0 2.67188 0 3.5V5H14.3158V3.5C14.3158 2.67188 13.6288 2 12.782 2Z"
+                  fill="#4E4B59"
+                />
+              </svg>
+            </i>
+            <input id="input-from2" placeholder="Data chek in" type="text" />
+          </label>
+          <label for="input-from3">
+            <i>
+              <svg
+                width="15"
+                height="16"
+                viewBox="0 0 15 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M14.3158 14.5C14.3158 15.3281 13.6288 16 12.782 16H1.53384C0.687037 16 5.72205e-06 15.3281 5.72205e-06 14.5V6H14.3158V14.5ZM12.2707 8.5C12.2707 8.225 12.0406 8 11.7594 8H8.69174C8.41053 8 8.18046 8.225 8.18046 8.5V11.5C8.18046 11.775 8.41053 12 8.69174 12H11.7594C12.0406 12 12.2707 11.775 12.2707 11.5V8.5ZM1.53384 2H3.06768V0.5C3.06768 0.225 3.29775 0 3.57895 0H4.60151C4.88271 0 5.11279 0.225 5.11279 0.5V2H9.20301V0.5C9.20301 0.225 9.43309 0 9.71429 0H10.7368C11.0181 0 11.2481 0.225 11.2481 0.5V2H12.782C13.6288 2 14.3158 2.67188 14.3158 3.5V5H5.72205e-06V3.5C5.72205e-06 2.67188 0.687037 2 1.53384 2Z"
+                  fill="#4E4B59"
+                />
+              </svg>
+            </i>
+            <input id="input-from3" placeholder="Data chek out" type="text" />
+          </label>
+
+          <!-- button uiverse -->
+          <button class="animated-button">
+            <svg
+              viewBox="0 0 24 24"
+              class="arr-2"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+              ></path>
+            </svg>
+            <span class="text">Procurar Hotel</span>
+            <span class="circle"></span>
+            <svg
+              viewBox="0 0 24 24"
+              class="arr-1"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+              ></path>
+            </svg>
+          </button>
+        </form>
       </section>
     </main>
   </body>
