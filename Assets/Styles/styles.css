@@ -18,7 +18,8 @@ html {
   --green-v2: #009538;
   --black: rgba(46, 38, 54, 1);
   --background: var(--white-v1);
-  --text-color: #33303e;
+  --descricao-text-color: #33303e;
+  --text-color: var(--black);
 }
 
 ::-webkit-scrollbar {
@@ -41,7 +42,9 @@ html {
 
 ::selection {
   color: var(--white-v1); /* Cor do texto selecionado */
-  background-color: var(--text-color); /* Cor de fundo do texto selecionado */
+  background-color: var(
+    --descricao-text-color
+  ); /* Cor de fundo do texto selecionado */
 }
 .dark-theme ::selection {
   color: var(--blue-v1); /* Cor do texto selecionado */
@@ -50,6 +53,7 @@ html {
 
 .dark-theme {
   --background: #1a1a1a;
+  --text-color: var(--white-v1);
 }
 
 @font-face {
@@ -556,7 +560,7 @@ form label input::placeholder {
 .descricao-viagem {
   font-family: "Lato Regular";
   font-size: 1.2rem;
-  color: var(--text-color);
+  color: var(--descricao-text-color);
   line-height: 1.6rem;
   text-align: justify;
 }
