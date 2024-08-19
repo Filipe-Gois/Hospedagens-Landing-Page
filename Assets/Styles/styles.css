@@ -20,6 +20,9 @@ html {
   --background: var(--white-v1);
   --descricao-text-color: #33303e;
   --text-color: var(--black);
+  --button-color: var(--blue-v2);
+
+  --shadow-color: rgba(0, 0, 0, 0.15);
 }
 
 ::-webkit-scrollbar {
@@ -54,6 +57,9 @@ html {
 .dark-theme {
   --background: #1a1a1a;
   --text-color: var(--white-v1);
+  --descricao-text-color: var(--white-v1);
+  --shadow-color: rgba(255, 255, 255, 0.15);
+  --button-color: var(--white-v1);
 }
 
 @font-face {
@@ -70,11 +76,20 @@ html {
   src: url("../Fonts/Lato/Lato-Black.ttf");
 }
 
+@font-face {
+  font-family: "Inter Medium";
+  src: url("../Fonts/Inter/static/Inter_18pt-Medium.ttf");
+}
+
 #titulo {
   font-family: "Lato Bold";
 }
 
-#sub-titulo {
+.sub-titulo {
+  font-family: "Lato Bold";
+  font-size: 2rem;
+  color: var(--text-color);
+  text-align: center;
 }
 
 #p-conteudo {
@@ -365,9 +380,9 @@ form {
   justify-content: space-evenly;
   padding: 1.2rem 0;
   align-items: center;
-  background-color: #ffffff;
   border-radius: 0.8rem;
-  box-shadow: 4px 4px 10px 5px rgba(0, 0, 0, 0.15);
+  background-color: var(--background);
+  box-shadow: 4px 4px 10px 5px var(--shadow-color);
 }
 
 form label:nth-last-child(2) {
@@ -388,10 +403,13 @@ form label {
 form label input {
   border: none;
   outline: none;
+  background-color: transparent;
+  color: var(--text-color);
 }
 form label input::placeholder {
   font-size: 1.6rem;
   font-family: "Lato Regular";
+  color: var(--text-color);
 }
 
 .btn-form {
@@ -463,6 +481,10 @@ form label input::placeholder {
   z-index: 1;
   transform: translateX(-12px);
   transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  /* color: var(--button-color); */
+}
+.animated-button .text:hover {
+  color: #ffffff;
 }
 
 .animated-button:hover {
@@ -546,7 +568,7 @@ form label input::placeholder {
 .titulo-viagem {
   font-family: "Lato Bold";
   font-size: 1.6rem;
-  color: var(--black);
+  color: var(--text-color);
   line-height: 2rem;
 }
 
@@ -563,6 +585,108 @@ form label input::placeholder {
   color: var(--descricao-text-color);
   line-height: 1.6rem;
   text-align: justify;
+}
+
+.sobre-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 5rem 0;
+}
+
+.hoteis {
+  color: var(--blue-v1);
+}
+
+.promocoes {
+  color: rgba(1, 148, 56, 1);
+}
+
+.nao-perca {
+  color: #019438;
+}
+
+.melhor {
+  color: var(--yellow);
+}
+
+.sobre-section-text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.sobre-section-image {
+  width: 100%;
+  height: 100%;
+}
+
+.sobre-descricao {
+  font-family: "Lato Regular";
+  font-size: 1.5rem;
+  text-align: center;
+  color: var(--text-color);
+}
+
+.content-section-sobre {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+footer {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.footer-top {
+  background-image: linear-gradient(to right, var(--green-v1), var(--green-v2));
+  width: 100%;
+  height: 100%;
+  padding: 20px 0;
+  color: var(--white-v2);
+  font-family: "Inter Medium";
+}
+
+.footer-top p:first-of-type {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.footer-top p:last--of-type {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.footer-bottom {
+  width: 100%;
+  height: max-content;
+  background-color: var(--yellow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5rem;
+}
+
+.footer-bottom h1 {
+  font-size: 1.8rem;
+}
+
+.sub-titulo-footer {
+  font-size: 1.8rem;
+  color: var(--white-v1);
+}
+
+.footer-bottom h2 {
+  font-family: "Lato Black";
+  font-size: 1.8rem;
+  color: var(--black);
+}
+
+.p-descricao-footer {
+  font-size: 1.4rem;
+  font-family: "Inter Medium";
 }
 
 @media screen and (min-width: 1000px) {
@@ -683,7 +807,21 @@ form label input::placeholder {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    background-color: var(--background);
+    box-shadow: 4px 4px 10px 5px var(--shadow-color);
   }
+
+  /* form {
+    width: 85%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 1.2rem 0;
+    align-items: center;
+
+    border-radius: 0.8rem;
+  } */
 
   form label:nth-last-child(2) {
     margin: 0;
@@ -724,8 +862,8 @@ form label input::placeholder {
     cursor: pointer;
   }
 
-  .section1 {
-  }
+  /* .section1 {
+  } */
 
   .form-submit {
     margin: 0;
@@ -736,5 +874,44 @@ form label input::placeholder {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+  }
+
+  .sobre-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+  }
+
+  .content-section-sobre {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .sobre-section-image {
+    width: 100%;
+    height: 100%;
+    max-width: 449px;
+    max-height: 300px;
+  }
+
+  .sub-titulo {
+    font-size: 2.8rem;
+    /* text-align: justify; */
+  }
+  .sobre-descricao {
+    font-size: 2rem;
+  }
+
+  .sobre-section-text-content {
+    max-width: 455px;
+  }
+
+  .sobre-section-text-content .sub-titulo {
+    text-align: start;
+  }
+
+  .sobre-section-text-content .sobre-descricao {
+    text-align: start;
   }
 }
