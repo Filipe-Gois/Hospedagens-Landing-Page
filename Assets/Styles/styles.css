@@ -99,6 +99,7 @@ html {
 
 body {
   background-color: var(--background);
+  transition: 0.5s ease-in-out;
 }
 
 h1 {
@@ -270,6 +271,7 @@ nav ul {
   background-color: var(--background);
   transition: 0.5s;
   border-radius: 30px;
+  transition: 0.5s ease-in-out;
 }
 
 .slider:before {
@@ -283,6 +285,7 @@ nav ul {
   box-shadow: inset 8px -4px 0px 0px #ececd9, -4px 1px 4px 0px #dadada;
   background: var(--background);
   transition: 0.5s;
+  transition: 0.5s ease-in-out;
 }
 
 .decoration {
@@ -382,6 +385,7 @@ form {
   align-items: center;
   border-radius: 0.8rem;
   background-color: var(--background);
+  transition: 0.5s ease-in-out;
   box-shadow: 4px 4px 10px 5px var(--shadow-color);
 }
 
@@ -525,6 +529,7 @@ form label input::placeholder {
   height: max-content;
   padding-bottom: 4rem;
   background-color: var(--background);
+  transition: 0.5s ease-in-out;
   display: flex;
   justify-content: center;
 }
@@ -839,6 +844,7 @@ footer {
     flex-direction: row;
     justify-content: space-around;
     background-color: var(--background);
+    transition: 0.5s ease-in-out;
     box-shadow: 4px 4px 10px 5px var(--shadow-color);
   }
 
